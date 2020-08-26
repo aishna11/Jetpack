@@ -1,0 +1,27 @@
+import os
+rows, columns = os.popen('stty size', 'r').read().split()
+reset_color="\x1B[0m"
+block = "\u2588"
+bg = "\x1B[44m"
+fg = "\x1B[34m"
+col_sf = "\x1B[97m"
+col_sb = "\x1B[107m"
+board = list()
+plain_board = list()
+board_len = 1500
+enemyrelpos=0
+board_check = list()
+board_start = 0
+speed = 0.05
+def_speed = speed
+total_time = int(def_speed*(board_len-int(columns))+100)
+enemiesKilled = 0
+coinsCollected = 0
+bulletsFired = 0
+isbossfight = False
+livesleft = 3
+dragonlivesleft = 5
+down=0
+start_time=-5
+oncePrinted=False
+main_rider=0
